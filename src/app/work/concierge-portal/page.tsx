@@ -73,7 +73,7 @@ const steps = [
     technical: [
       "The booking link is state-aware: returning patients who already have an active appointment are redirected here automatically instead of re-entering the booking flow — one link serves both new and existing patients",
       "Displays accession ID, appointment type, status (Pending / Confirmed / Completed), and all requested time slots",
-      "Cancel and Reschedule actions gated by appointment status — disabled once a slot is confirmed by ops",
+      "Cancel and Reschedule actions available until the appointment is completed — gated by status so actions that no longer apply are hidden",
       "Within 24 hours of the appointment, cancellation incurs the full fee and rescheduling incurs a handling fee — clicking either action surfaces a fee disclosure modal requiring explicit confirmation before proceeding",
       "Address and contact info surfaced for quick reference; email sent on any status change",
     ],
