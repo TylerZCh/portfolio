@@ -74,6 +74,7 @@ const steps = [
       "The booking link is state-aware: returning patients who already have an active appointment are redirected here automatically instead of re-entering the booking flow — one link serves both new and existing patients",
       "Displays accession ID, appointment type, status (Pending / Confirmed / Completed), and all requested time slots",
       "Cancel and Reschedule actions gated by appointment status — disabled once a slot is confirmed by ops",
+      "Within 24 hours of the appointment, cancellation incurs the full fee and rescheduling incurs a handling fee — clicking either action surfaces a fee disclosure modal requiring explicit confirmation before proceeding",
       "Address and contact info surfaced for quick reference; email sent on any status change",
     ],
   },
@@ -174,6 +175,11 @@ export default function ConciergePortalPage() {
             decision="Calendar constraints enforced client-side"
             why="48 business-hour lead time, Mon–Thu only, no holidays, max 2 slots per day — these rules change infrequently but affect every date interaction. Enforcing them in UI state gives instant feedback without a round-trip per click."
             tradeoff="Business rule changes require a frontend deploy; mitigated by sourcing the holiday list from a package so only the scheduling logic itself is hardcoded."
+          />
+          <DecisionCard
+            decision="Dual-layer 24-hour cancellation enforcement"
+            why="Patients could time their cancellation or reschedule request to land just before the 24-hour cutoff — a purely backend check would still be exploitable if the UI allowed the action without warning. Adding a client-side time check that surfaces a fee disclosure modal on click ensures patients are informed before submitting, while the backend independently re-validates the timestamp on receipt to prevent any bypass."
+            tradeoff="Two sources of truth for the cutoff time require keeping the frontend and backend logic in sync — a clock skew or timezone mismatch between client and server could cause inconsistent fee enforcement, mitigated by always resolving the cutoff server-side and treating the frontend check as a UX layer only."
           />
           <DecisionCard
             decision="RTK Query instead of Redux + Axios"
