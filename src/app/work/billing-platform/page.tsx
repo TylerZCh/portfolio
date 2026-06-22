@@ -215,7 +215,7 @@ export default function BillingPlatformPage() {
         </div>
       </CaseStudySection>
 
-      <BackToWork />
+      <BackToWork currentSlug="billing-platform" />
     </main>
   );
 }

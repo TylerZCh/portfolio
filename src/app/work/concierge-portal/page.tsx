@@ -238,7 +238,7 @@ export default function ConciergePortalPage() {
           </p>
         </div>
       </CaseStudySection>
-      <BackToWork />
+      <BackToWork currentSlug="concierge-portal" />
     </main>
   );
 }

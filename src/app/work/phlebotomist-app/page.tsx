@@ -292,7 +292,7 @@ export default function PhlebotomistAppPage() {
           </p>
         </div>
       </CaseStudySection>
-      <BackToWork />
+      <BackToWork currentSlug="phlebotomist-app" />
     </main>
   );
 }
