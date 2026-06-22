@@ -15,7 +15,7 @@ const fadeUp: Variants = {
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
+    <section className="relative min-h-screen flex flex-col justify-start pt-40 md:pt-48 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
       {/* Availability badge */}
       <motion.div
         custom={0}
