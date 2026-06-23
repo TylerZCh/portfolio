@@ -22,7 +22,7 @@ function LinkedInIcon({ size = 16 }: { size?: number }) {
 
 const socialLinks = [
   { label: "GitHub", href: "https://github.com/zeyucheng", icon: GitHubIcon },
-  { label: "LinkedIn", href: "https://linkedin.com/in/zeyucheng", icon: LinkedInIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/zeyu-cheng", icon: LinkedInIcon },
   { label: "Email", href: "mailto:zeyu.cheng@outlook.com", icon: ({ size }: { size?: number }) => <Mail size={size} strokeWidth={1.5} /> },
 ];
 

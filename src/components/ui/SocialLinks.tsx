@@ -39,7 +39,7 @@ const links = [
   // },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/zeyucheng",
+    href: "https://www.linkedin.com/in/zeyu-cheng",
     icon: LinkedInIcon,
   },
   {
