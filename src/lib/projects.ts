@@ -1,23 +1,5 @@
 export const projects = [
   {
-    slug: "phlebotomist-app",
-    title: "Phlebotomist Field App",
-    tag: "Mobile · React Native · Expo",
-    year: "2022–Present",
-    outcome: "50% cycle reduction · 100+ field professionals onboarded",
-    description:
-      "Rebuilt a legacy prototype into a production-grade mobile platform for 20+ healthcare providers — replacing phone-based coordination with real-time operational tracking.",
-    highlights: [
-      "Per-day query redesign slashed calendar latency",
-      "QR barcode scan + manual fallback for reliability",
-      "Live map + appointment detail + specimen handling",
-      "90%+ automated test coverage with Detox E2E",
-    ],
-    image: "/screenshots/phlebotomist-cover-v2.png",
-    color: "from-blue-50 to-indigo-50",
-    accent: "bg-blue-500",
-  },
-  {
     slug: "concierge-portal",
     title: "Global Patient Booking Platform",
     tag: "Web · Next.js · Redux Toolkit",
@@ -53,6 +35,24 @@ export const projects = [
     confidential: true,
     color: "from-violet-50 to-purple-50",
     accent: "bg-violet-500",
+  },
+    {
+    slug: "phlebotomist-app",
+    title: "Phlebotomist Field App",
+    tag: "Mobile · React Native · Expo",
+    year: "2022–Present",
+    outcome: "50% cycle reduction · 100+ field professionals onboarded",
+    description:
+      "Rebuilt a legacy prototype into a production-grade mobile platform for 20+ healthcare providers — replacing phone-based coordination with real-time operational tracking.",
+    highlights: [
+      "Per-day query redesign slashed calendar latency",
+      "QR barcode scan + manual fallback for reliability",
+      "Live map + appointment detail + specimen handling",
+      "90%+ automated test coverage with Detox E2E",
+    ],
+    image: "/screenshots/phlebotomist-cover-v2.png",
+    color: "from-blue-50 to-indigo-50",
+    accent: "bg-blue-500",
   },
 ] as const;
 

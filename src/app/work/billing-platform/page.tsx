@@ -52,15 +52,15 @@ export default function BillingPlatformPage() {
   return (
     <main>
       <CaseStudyHero
-        tag="Web · Next.js · TanStack Table · RBAC"
+        tag="Full-Stack · Next.js · Node.js · RBAC"
         title="Internal Billing & Operations Platform"
-        description="A 0→1 internal platform centralizing financial workflows, payout management, and enterprise reporting — with a multi-tenant permission system scoping data access across three distinct roles."
+        description="A 0→1 full-stack platform centralizing transaction management, provider payouts, financial adjustments, and enterprise reporting — with a multi-tenant permission system scoping data access across finance, operations, and external vendor roles."
         gradient="from-violet-50/60"
         stats={[
           { label: "Records managed", value: "10K+" },
-          { label: "Role", value: "Solo FE lead" },
+          { label: "Role", value: "Full-stack lead" },
           { label: "Timeline", value: "0 → 1" },
-          { label: "Platform", value: "Web (Next.js)" },
+          { label: "Stack", value: "Next.js · Node.js" },
         ]}
       />
 
@@ -115,16 +115,20 @@ export default function BillingPlatformPage() {
         </div>
       </CaseStudySection>
 
-      <CaseStudySection label="03 — Key Technical Work" title="High-performance tables and auditable workflows">
+      <CaseStudySection label="03 — Key Technical Work" title="Full-stack workflows, high-performance tables, and auditable data access">
         <div className="flex flex-col gap-3">
           {[
+            {
+              title: "Node.js REST APIs for financial workflows",
+              detail: "Designed and built the backend REST APIs powering transaction querying, payout management, financial adjustments, and reporting — with server-side pagination, filtering, and sorting handling 10K+ transaction records.",
+            },
             {
               title: "TanStack Table with server-side data",
               detail: "Financial dashboards handle 10K+ transaction records. Pagination, filtering, and multi-column sorting are all server-driven — the client never loads more than one page of data at a time, keeping performance consistent regardless of dataset size.",
             },
             {
               title: "Multi-tenant RBAC",
-              detail: "Designed a role-based access control system with three permission tiers. Internal roles (Finance, Ops) see aggregate cross-company data; vendor organizations are scoped to their own records at the API level — not just hidden in the UI.",
+              detail: "Designed and implemented a role-based access control and data-access model spanning finance teams, operations managers, and external vendor organizations. Internal roles see aggregate cross-company data; vendor organizations are scoped to their own records at the API level — not just hidden in the UI — preventing cross-tenant data exposure.",
             },
             {
               title: "Appointment management for ops",
@@ -132,7 +136,7 @@ export default function BillingPlatformPage() {
             },
             {
               title: "Universal data export",
-              detail: "Every data view — filtered or not — can be exported as XLSX, CSV, or client-side PDF. Eliminated manual report preparation that previously took the finance team hours per reporting cycle.",
+              detail: "Every data view — filtered or not — can be exported as secure XLSX, CSV, or client-side generated PDF. Eliminated manual, spreadsheet-based report preparation that previously took the finance team hours per reporting cycle.",
             },
           ].map(({ title, detail }) => (
             <div key={title} className="rounded-xl border border-neutral-100 p-6 flex flex-col gap-2">
@@ -159,6 +163,11 @@ export default function BillingPlatformPage() {
             decision="Client-side PDF generation"
             why="Finance teams needed to produce reports on demand without a server round-trip or file storage dependency. Client-side generation keeps exports instant and stateless."
             tradeoff="Large exports can briefly block the main thread — mitigated by chunking the render and showing a progress indicator."
+          />
+          <DecisionCard
+            decision="RBAC enforced at the API layer, not just the UI"
+            why="Financial and appointment data spans internal teams and external vendor organizations. Scoping access purely in the frontend would leave the data exposed to any direct API call — permissions had to be enforced server-side in the Node.js API layer itself."
+            tradeoff="Added complexity to every endpoint, since each request needed role and tenant context resolved before querying — but it's the only model that actually prevents cross-tenant data exposure."
           />
         </div>
       </CaseStudySection>

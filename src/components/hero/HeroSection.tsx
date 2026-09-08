@@ -38,7 +38,7 @@ export function HeroSection() {
         variants={fadeUp}
         className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-neutral-900 leading-[1.1] mb-6"
       >
-        Frontend Engineer
+        Full Stack / Frontend Engineer
         <br />
         <span className="text-neutral-400">who owns the product,</span>
         <br />
