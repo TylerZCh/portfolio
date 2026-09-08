@@ -209,10 +209,6 @@ export default function ConciergePortalPage() {
                 title: "GitHub Actions CI",
                 detail: "Tests gate every pull request. A failing test blocks the merge — preventing broken booking flows from reaching production where they would directly impact patient acquisition.",
               },
-              {
-                title: "Lighthouse CI",
-                detail: "Performance budgets enforced on every deploy. The booking flow is patient-facing and revenue-critical — load time regressions are caught before they ship.",
-              },
             ].map(({ title, detail }) => (
               <div key={title} className="rounded-xl border border-neutral-100 p-5 flex flex-col gap-2">
                 <p className="text-sm font-semibold text-neutral-900">{title}</p>

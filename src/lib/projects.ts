@@ -17,19 +17,19 @@ export const projects = [
     color: "from-teal-50 to-cyan-50",
     accent: "bg-teal-500",
   },
-  {
+{
     slug: "billing-platform",
     title: "Internal Billing & Operations Platform",
-    tag: "Web · Next.js · TanStack Table · RBAC",
-    year: "2023–Present",
+    tag: "Full-Stack · Next.js · Node.js · RBAC",
+    year: "2023-2026",
     outcome: "10K+ records · Eliminated manual spreadsheet reporting",
     description:
-      "A 0→1 internal platform centralizing financial workflows, payout management, and enterprise reporting — with a multi-tenant permission system scoping data access across three distinct roles.",
+      "A 0→1 full-stack platform centralizing transaction management, provider payouts, financial adjustments, and enterprise reporting — with a multi-tenant permission system scoping data access across finance, operations, and external vendor roles.",
     highlights: [
-      "Multi-tenant RBAC: finance, ops, and vendor roles with isolated data access",
+      "Node.js REST APIs for transaction querying, payouts, adjustments, and reporting",
+      "Multi-tenant RBAC preventing cross-tenant data exposure across finance, ops, and vendor roles",
       "TanStack Table with server-side pagination across 10K+ transaction records",
-      "Appointment status management for ops teams, payment workflows for finance",
-      "XLSX / CSV / PDF export available to all roles for reporting and auditing",
+      "Secure XLSX / CSV / PDF export replacing manual spreadsheet-based reporting",
     ],
     image: null,
     confidential: true,

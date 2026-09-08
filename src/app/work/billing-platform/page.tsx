@@ -175,7 +175,7 @@ export default function BillingPlatformPage() {
       <CaseStudySection label="05 — Testing & CI/CD" title="Automated coverage on financial workflows">
         <div className="flex flex-col gap-4 text-neutral-500 leading-relaxed">
           <p>
-            Financial data requires a high bar for correctness — a mis-scoped query exposing one vendor's
+            Financial data requires a high bar for correctness — a mis-scoped query exposing one vendor&apos;s
             data to another, or a broken export, is a serious incident. Tests were added alongside each feature.
           </p>
           <div className="grid md:grid-cols-2 gap-4 mt-2">

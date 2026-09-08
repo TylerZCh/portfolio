@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const skills = [
   { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"] },
   { category: "Mobile", items: ["React Native", "Expo", "Background Location", "Push Notifications", "Deep Linking"] },
-  { category: "Testing & Infra", items: ["Jest", "Detox (E2E)", "GitHub Actions", "Lighthouse CI", "Webpack"] },
+  { category: "Testing & Infra", items: ["Jest", "Playwright(E2E)", "Detox (E2E)", "GitHub Actions", "Webpack"] },
   { category: "Design", items: ["Figma", "UX Design", "Component Systems", "Accessibility", "Performance"] },
 ];
 
